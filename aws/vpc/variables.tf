@@ -1,19 +1,17 @@
 variable "vpc_cidr_block" {
   type = string
+  default = "10.0.0.0/16"
 }
 
 variable "public_subnet_cidr_block" {
   type = string
+  default = "10.0.1.0/24"
 }
 
-variable "private_subnet_cidr_block" {
+variable "aws_access_key" {
   type = string
 }
 
-variable "AWS_ACCESS_KEY_ID" {
-  type = string
-}
-
-variable "AWS_SECET_ACCESS_KEY" {
+variable "aws_secret_key" {
   type = string
 }

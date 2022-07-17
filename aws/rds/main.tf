@@ -1,3 +1,17 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+  }
+}
+
+provider "aws" {
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+  region = "ap-northeast-2"
+}
+
 resource "aws_db_instance" "my-rds" {
   allocated_storage    = 50
   engine               = var.my_rds_engine

@@ -10,7 +10,7 @@ variable "my_rds_engine_version" {
 
 variable "my_rds_instance" {
   type = string
-  default = "db.t3.micro"
+  default = "t3.micro"
 }
 
 variable "my_rds_name" {
@@ -22,5 +22,13 @@ variable "my_rds_username" {
 }
 
 variable "my_rds_password" {
+  type = string
+}
+
+variable "aws_access_key" {
+  type = string
+}
+
+variable "aws_secret_key" {
   type = string
 }
